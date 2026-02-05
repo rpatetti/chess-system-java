@@ -1,46 +1,88 @@
+
 # Chess System Java
 
-Projeto de jogo de xadrez em Java executado via console, desenvolvido como parte do curso de Java do professor Nelio Alves. O objetivo é praticar programação orientada a objetos, tratamento de exceções e arquitetura em camadas.
+This is a simple terminal-based chess game implemented in Java. Players can enjoy a game of chess by inputting their moves via the terminal. The game displays the current state of the board, captures pieces for both white and black players, turn count, and the active player's turn.
 
-## Índice
+This Java chess game project, executed in console, was developed as part of Professor Nelio Alves' Java course. The goal is to practice object-oriented programming, exception handling, and layered architecture.
 
-- Sobre o projeto
-- Tecnologias
-- Pré-requisitos
-- Como executar
-- Como jogar
-- Estrutura do projeto
-- Conceitos praticados
-- Próximos passos
-- Autor
+The system validates moves, handles input errors, and applies special rules such as castling, en passant, and pawn promotion.
 
-## Sobre o projeto
+<img width="1592" height="1701" alt="chess-system-design" src="https://github.com/user-attachments/assets/ffa54158-c826-416f-91ac-e499ed4ec660" />
 
-Este projeto implementa um jogo de xadrez completo no terminal, permitindo que dois jogadores disputem uma partida localmente. O sistema valida movimentos, trata erros de entrada e aplica regras especiais como roque, en passant e promoção de peão.
+## Getting Started
+### Prerequisites
 
-<img width="1592" height="1701" alt="chess-system-design" src="https://github.com/user-attachments/assets/88d0b171-6f3c-494f-9561-e0f67dc798f1" />
+-   Java JDK (version 8 and higher)
+-   Terminal or Command Prompt
 
-## Tecnologias
+### Installation
 
-- Java (versão recomendada: 8 ou superior)
-- IDE à sua escolha (Eclipse, IntelliJ IDEA, VS Code, etc.)
+[](https://github.com/detds/chess-system-java?tab=readme-ov-file#installation)
 
-## Pré-requisitos
+1.  Clone this repository to your local machine using:
+    ```
+    $ git clone https://github.com/rpatetti/chess-system-java.git
+    ```
+2.  Navigate to the  `src`  directory:
+    ```
+    $ cd chess-system-java/src/
+    ```
+3.  Compile the Java source files:
+    ```
+    $ javac application/Program.java
+    ```
 
-- JDK 8+ instalado
-- Git instalado (opcional, para clonar o repositório)
-- Um terminal (cmd, PowerShell, bash, etc.)
+## How to Play
 
-## Como executar
+### Chess Piece Notation
 
-```bash
-# Clonar o repositório
-git clone git@github.com:rpatetti/chess-system-java.git
-cd chess-system-java
+In this chess program, the following piece abbreviations are used:
 
-# Compilar os arquivos (se estiver compilando via terminal)
-javac -cp src -d bin src/application/Program.java
+-   `K`  - King
+-   `Q`  - Queen
+-   `R`  - Rook
+-   `N`  - Knight
+-   `B`  - Bishop
+-   `P`  - Pawn
 
-# Executar o jogo
-cd bin
-java application.Program
+These abbreviations represent the different chess pieces on the board.
+
+### Move Notation
+Moves are specified by providing the source position and the target position. For example, to move a pawn from a2 to a4, you would input: Source: a2, Target: a4. Make sure to use the correct notation for the source and target positions to execute your moves successfully.
+
+### Gameplay
+
+1.  Open your terminal and navigate to the  `src`  directory.
+    
+2.  Run the compiled Java program:
+    ```
+    $ java application.Program 
+    ```
+3.  The chess board will be displayed.
+    
+4.  Select the piece you want to move using the following format as an example:
+	 ```
+    Source: a2
+	```
+5.  The game will show possible movements for the selected piece.
+    
+6.  Input the target position for the selected piece using the following format as an example:
+    ```
+    Target: a4
+    ```
+    
+7.  The game will validate your move, update the board, and display the new state.
+    
+8.  Continue playing by alternating turns and inputting your moves as described above.
+
+![chess-system-java-demo](https://github.com/user-attachments/assets/596d66b2-e6fa-47ce-8f8c-0a870e858469)
+
+## Features
+-   Terminal-based chess game.
+-   Interactive gameplay with player input.
+-   Displays the current state of the chess board.
+-   Keeps track of captures for both white and black players.
+-   Shows the turn count and the active player turn.
+-   Validates user input and updates the board accordingly.
+-   Display of possible movements for selected pieces.
+-   Clear and user-friendly interface.
